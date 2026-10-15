@@ -1,14 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net472</TargetFramework>
-        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-        <AssemblyTitle>Pharmacist</AssemblyTitle>
-        <Product>Pharmacist</Product>
-        <Copyright>Copyright © 2025</Copyright>
+        <TargetFramework>net10.0</TargetFramework>
         <OutputPath>src\Assemblies\</OutputPath>
-        <DebugType>portable</DebugType>
-        <LangVersion>9</LangVersion>
-        <RootNamespace>Ceres.PharmacistReprescribedReprescribed</RootNamespace>
+        <RootNamespace>Ceres.PharmacistReprescribed</RootNamespace>
+		
+		<!-- prevents erroneous files being made on compile. thanks VS2026 -->
+		<GenerateDependencyFile>false</GenerateDependencyFile>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     </PropertyGroup>
     <ItemGroup>
       <Reference Update="System">
