@@ -17,12 +17,12 @@ This is only for me (the author) to keep track of stuff that I may or may not wo
 ### INDEV
 #### Version 0.2
 * General backend cleanup. Overall functionality should be essentially identical.
-* Darkened the colors of the icons in order to give them parity with vanilla UI.
-* Patient types (colonists, prisoners, etc) now match the name and description of vanilla categories. Behavior remains the same!
-* Bottom bar touchups:
-	* Now appears after the World tab but before the History tab.
-	* Now has an icon instead of the word Pharmacist, making it less visually intrusive.
-	* Can now be hidden (this is cosmetic; existing configurations will remain active) through a toggle in the mod settings.
+* UI refinements:
+	* Darkened the colors of the icons in order to give them parity with vanilla UIs.
+	* Patient types (colonists, prisoners, etc) now match the name and description of vanilla categories. Behavior remains the same!
+	* Buttons now have mouseover sounds. Clicky clicky.
+	* The bottom bar now has an icon instead of the word Pharmacist, making it less visually intrusive.
+	* . It can also be hidden via a toggle in the mod settings. This is a cosmetic toggle only; the existing configuration will remain active.
 * *Internal:* Reshuffled a lot of class names and namespaces, i.e. `Pharmacist` -> `Ceres.PharmacistReprescribed`. Also removed some old redundant copyright notices, documentation, etc from the original mod. now that I'm a bit more experienced with RW's codebase, I feel more confident in changing this stuff knowing it won't cause any weird bugs!
 
 ### 9 December, 2025

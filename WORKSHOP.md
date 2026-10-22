@@ -7,7 +7,7 @@ ___
 
 [i]This mod contains zero AI.[/i]
 
-A continuation/fork/successor of the lovely mod Pharmacist, originally created by Fluffy. For a full description of what the mod does, you can consult the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1365242717]original page[/url], but in short: Pharmacist allows you to set the maximum level of medicine that can be used for different severities of injury. Doctors will determine which medicine to use based on the type of wound, the Pharmacist's configured settings, and the target's individually-configured medical care (as in vanilla.)
+A continuation/fork/successor of the lovely mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1365242717]Pharmacist[/url], originally created by Fluffy. This mod allows you to set the maximum level of medicine that can be used for different types of injury. Doctors will determine which medicine to use based on the type of wound, the Pharmacist's configured settings, and the target's individually-configured medical care (as in vanilla.)
 
 You can find this mod's source code on [url=https://github.com/Ilysen/PharmacistReprescribed]GitHub[/url], under the MIT license. Non-Steam releases can be found here too!
 
@@ -20,9 +20,9 @@ Represcribed makes a number of tweaks and improvements to the original Pharmacis
 [list]
 [*]Population categories have been tweaked to more closely match vanilla designations. "Animal" is now "Tamed animals"; "Guest" is now "Other". Slaves and entities have their own settings that will appear if Ideology or Anomaly are active, respectively.
 [*]Added an "Ongoing conditions" classification. This includes non-fatal diseases like gut worms and fibrous mechanites, but also includes long-term illnesses like blood rot and asthma. It does [i]not[/i] include immunity-based diseases like plague, flu, and infections; Pharmacist still prescribes for those based on severity and immunity gain progress. Otherwise, anything that must be regularly tended will generally fall into this category.
-[*]Adds a configurable medicine search radius, defaulting to unlimited (as in vanilla.) Doctors will only grab medicine within this many tiles, searching first near the patient and then near themselves; if they can't find any, they'll default to manual care instead.
+[*]Adds a configurable medicine search radius, defaulting to unlimited (as in vanilla.) Doctors will only grab medicine within this many tiles, searching first near the patient and then near themselves; if they can't find any, they'll only use what they have in their inventory, or nothing at all.
 [*]Re-enables a vanilla feature allowing doctors to grab medicine from pack animals if they can't find it anywhere else. This was actually added all the way back in the Ideology days (version 1.3.3159), but Pharmacist's code was never updated to account for it.
-[*]The "Minor cuts threshold" feature, which treats minor injuries as major wounds if a specific number of them are present, now checks for all infectable wounds instead of just bleeding ones. The previous implementation didn't account for things like burns and frostbite, which are actually some of the the likeliest injury types to cause infections!
+[*]The "Minor cuts threshold" feature, which treats minor injuries as major wounds if a specific number of them are present, now checks for all infectable wounds instead of just bleeding ones. The previous implementation didn't account for things like burns and frostbite.
 [list][*]This feature is also now ignored for pawns that can't get infections, like sanguophages or ghouls.[/list]
 [*]Fixed an inconsistency that caused doctors to always prioritize medicine from their own inventory. In practice, this means that they will now actually seek better medicine depending on the prescribed treatment, instead of using lower-quality medicine that they happen to have on hand. You can still draft tend to force them to use just what they're holding.
 [*]Replaced all the old icons with a new set sourced from Font Awesome.
@@ -38,10 +38,7 @@ So that's why I made this one! Represcribed aims to be a proper modernization - 
 I'm hitting the character limit but these are the important ones:
 
 [h3]Where's the configuration menu?[/h3]
-There's a tab for it on the bottom of the screen! Look for the one labeled Pharmacist.
-
-[h3]I'm getting an error that the game is trying to load a duplicate package ID. How do I fix that?[/h3]
-Unsubscribe from any other versions of Pharmacist! For compatibility reasons, I've kept the same mod ID in this revival, so any other versions of the mod will conflict.
+There's a tab for it on the bottom of the screen. Look for the plus symbol.
 
 [h3]What happens with blood rot?[/h3]
 Blood rot (along with things like gut worms, etc. -- see  the "Changes to the original" section for more info) is treated under the [b]Ongoing conditions[/b] classification.
@@ -49,11 +46,14 @@ Blood rot (along with things like gut worms, etc. -- see  the "Changes to the or
 [h3]Fibrous/sensory mechanites have upsides. Can we treat those differently than strictly negative conditions?[/h3]
 So there's actually a quirk specifically to mechanites that isn't immediately obvious: tending doesn't remove them any faster. Instead, fibrous/sensory mechanites always have a flat duration, and tending will prevent them from going from the [i]mild pain[/i] to [i]intense pain[/i] stage. Since those things are the case, and tending doesn't cause the disease to disappear more quickly, they're currently lumped in with the other long-term conditions.
 
+[h3]I'm getting an error that the game is trying to load a duplicate package ID. How do I fix that?[/h3]
+Unsubscribe from any other versions of Pharmacist! For compatibility reasons, I've kept the same mod ID in this revival, so any other versions of the mod will conflict.
+
 [h3]Does this work with modded medicines?[/h3]
 It should. If it doesn't, let me know.
 
-[h3]Can I do anything about the bottom bar tab?[/h3]
-You can toggle its visibility in the mod settings! You can also [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3593612390]Pharmacist Icon[/url], a super simple addon mod by Marconius, to make it less intrusive.
+[h3]Can I hide the bottom bar tab?[/h3]
+You can toggle its visibility in the mod settings!
 
 [h2]Compatibility & troubleshooting[/h2]
 [b][i]I have not tested compatibility too much, so you're in unmapped waters.[/i][/b] I made this fork for personal use, and I tend to run a pretty light mod list. I've tried to keep the code as clean as possible, but if you run into any compatibility issues, let me know and I'll take a look.
@@ -67,7 +67,8 @@ Pharmacist: Represcribed has received contributions from the following people:
 [/list]
 
 [h2]Donations[/h2]
-You can find the Ko-fi link of the original creator, Fluffy, here: https://ko-fi.com/fluffymods. They're the one who made the original mod in the first place!
 
-As for me, I am not in this for the cash and I am never going to stop maintaining things even if I don't earn from them, but if you feel like giving support, I'd be extremely grateful! You can find my own Ko-fi link here: https://ko-fi.com/ceresetal
+Support is never required but always deeply appreciated and very helpful! You can find my Ko-fi link here: https://ko-fi.com/ceresetal
+
+You can also find the Ko-fi link of Pharmacist's original creator, Fluffy, here: https://ko-fi.com/fluffymods.
 ```

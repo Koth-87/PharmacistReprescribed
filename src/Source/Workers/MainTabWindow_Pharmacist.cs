@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
+using Verse.Sound;
 using static Ceres.PharmacistReprescribed.Constants;
 using static Ceres.PharmacistReprescribed.Resources;
 
@@ -217,6 +218,7 @@ namespace Ceres.PharmacistReprescribed
 
 					Widgets.DrawHighlightIfMouseover(cell);
 					GUI.DrawTexture(iconRect, CareTextures[(int)PharmacistSettings.CareSettings[population][severity]]);
+					MouseoverSounds.DoRegion(iconRect);
 
 					if (Widgets.ButtonInvisible(cell))
 					{
